@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Card Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <h2 class="logo__title">ANDERSON SMITH</h2>
+      <span class="logo__sub">GRAPHIC & WEB DESIGNER</span>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="section profile" id="profile">
+      <div class="profile__main">
+        <div class="profile__avatar">
+          <img src="img/avatar.jpg" alt="">
+        </div>
+        <div class="profile__heading">
+          <h1 class="profile__title">ANDERSON SMITH</h1>
+          <span class="profile__sub-title">GRAPHIC & WEB DESIGNER</span>
+          <p class="profile__about">I like to make cool and creative designs. My design stash is always full of
+            refreshing ideas. Feel free to take a look around my Vcard.</p>
+        </div>
+      </div>
+      <div class="profile__info">
+        <ul class="profile__list">
+          <li class="profile__item">
+            <b>Name</b>
+            <span>Anderson smith</span>
+          </li>
+          <li class="profile__item">
+            <b>Birthday</b>
+            <span>March 13, 1988</span>
+          </li>
+          <li class="profile__item">
+            <b>Address</b>
+            <span>Melbourne Victoria 3000 Australia</span>
+          </li>
+          <li class="profile__item">
+            <b>Email</b>
+            <span>Anderson.smith@gmail.com</span>
+          </li>
+          <li class="profile__item">
+            <b>Phone</b>
+            <span>+123 456 789 111</span>
+          </li>
+          <li class="profile__item">
+            <b>Website</b>
+            <span>www.Andersonsmith.com</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item" data-target="resume"><i>:</i><span>Resume</span></li>
+        <li class="nav__item" data-target="portfolio"><i>8</i><span>Portfolio</span></li>
+        <li class="nav__item" data-target="contact"><i>!</i><span>Contact</span></li>
+        <li class="nav__item" data-target="profile"><i>C</i><span>Profile</span></li>
+      </ul>
+    </nav>
+
+
+    <section class="section" id="resume"><h1>Resume</h1></section>
+    <section class="section" id="portfolio"><h1>Portfolio</h1></section>
+    <section class="section" id="contact"><h1>Contact</h1></section>
+  </main>
+
+
+  <script src="js/items.js"></script>
+</body>
+
+</html>
