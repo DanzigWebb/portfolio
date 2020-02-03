@@ -1,0 +1,27 @@
+
+
+  
+html
+  font-size: 20.8333333vw
+  background-color: #fff
+  @media (min-width: 480px)
+    font-size: 100px
+    overflow-x: hidden
+body
+  font-size: .20rem
+  max-width: 480px
+  margin: auto
+  position: relative
+  line-height: 1.4
+  font-weight: 300
+  font-family: 'Rubik', sans-serif
+  color: #000
+  height: 100vh
+  background-image: url(../../img/bg.jpg)
+  background-size: cover
+  input, textarea
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green

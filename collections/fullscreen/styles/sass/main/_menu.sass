@@ -1,0 +1,81 @@
+menu.m-menu
+  position: fixed
+  right: 0
+  top: 0
+  bottom: 0
+  height: 100vh
+  background-color: $dark
+  transform: translateX(100%)
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0
+  padding: 0
+  width: 300px
+  z-index: 99
+  box-shadow: -3px 1px 2px 0px rgba(0, 0, 0, 0.4)
+  transition: ease .3s
+  &.active
+    transform: translateX(0)
+.m-menu
+  &-list
+    margin: 0
+    padding: 0
+    width: 100%
+  &-li
+    list-style: none
+
+  &__link
+    display: block
+    text-align: center
+    padding: 5px 0
+    transition: $animbez .3s
+    text-decoration: none
+    color: #fff
+    position: relative
+    &.active
+      border-left: 4px solid $orange
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      width: 0
+      background: $accent
+      transition: ease all .5s
+      z-index: -1
+    &:hover
+      color: #fff
+      &:before
+        width: 100%
+
+.m-menu__btn
+  position: absolute
+  top: 40px
+  left: 0
+  border: none
+  background-color: $accent
+  color: #fff
+  height: 40px
+  width: 40px
+  font-size: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  transform: translateX(-100%)
+  transition: ease all .4s
+  overflow: hidden
+  p
+    margin: 0
+    transform: rotate(0) translateY(-2px)
+    line-height: 40px
+    display: flex
+    align-items: center
+    z-index: -1
+
+.m-menu.active
+  .m-menu__btn
+    transform: translateX(0)
+    p
+      transform: rotate(180deg)

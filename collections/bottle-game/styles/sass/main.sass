@@ -1,0 +1,323 @@
+@import "vars"
+@import "most"
+@import "offer"
+@import "anim"
+// ===================>
+// header
+// <===================
+.header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 .2rem
+  height: 0.7rem
+  color: #fff
+.header__heart
+  display: flex
+  align-items: center
+  justify-content: center
+.header__img
+  flex-shrink: 0
+  width: 0.43rem
+  padding-right: 0.05rem
+  animation: pulse 2s infinite
+.header__index
+  font-weight: 900
+  font-size: 0.25rem
+.header__info
+  font-size: 0.2rem
+  font-weight: 900
+
+// ===================>
+// players
+// <===================
+
+.ground
+  width: 4rem
+  height: 4rem
+  margin: auto
+  position: relative
+.main
+  height: calc(100% - 0.7rem)
+  display: flex
+  align-items: center
+  position: relative
+  transition: .4s
+  &.remove
+    opacity: 0
+    visibility: hidden
+.groud__item
+  width: .74rem
+  height: .74rem
+  position: absolute
+  top: 0
+  bottom: 0
+  text-align: center
+  color: #fff
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+  transition: .5s ease all
+  img
+    width: 100%
+.ground__name
+  font-size: 0.14rem
+  line-height: 0.9
+  position: relative
+  bottom: 0.1rem
+.ground__index
+  position: absolute
+  top: 0
+  right: -.05rem
+  font-weight: 500
+  color: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 0.23rem
+  height: 0.23rem
+  background-image: url(../../img/kiss.png)
+  background-size: contain
+  background-repeat: no-repeat
+  font-size: 0.17rem
+.player
+  width: 0.74rem
+  height: 0.74rem
+  position: relative
+
+// ===================>
+// bottle
+// <===================
+
+.center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  width: 1.66rem
+  height: 1.66rem
+  display: flex
+  align-items: center
+  justify-content: center
+
+.bottle
+  width: 1.66rem
+  height: 1.66rem
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: 5s ease
+  &.return
+    transition: 0s
+    transform: rotate(0)
+  img
+    height: 100%
+    transition: .3s
+
+.lines
+  position: absolute
+  right: -.5rem
+  top: 0
+  width: 1.35rem
+  height: 1.2rem
+  background-image: url(../../img/lines.svg)
+  background-size: contain
+  background-repeat: no-repeat
+  display: flex
+  justify-content: center
+  z-index: -1
+  animation: rotate 4s ease infinite
+  transition: .9s ease all
+  span
+    font-size: 0.15rem
+    font-weight: bold
+    color: #fff
+    margin-top: 0.1rem
+    margin-left: 0.1rem
+  &.active
+    transform: rotate(190deg)
+    opacity: 0
+
+
+// ===================>
+// game elements
+// <===================
+.game__elements
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 10
+.game__header
+  position: absolute
+  top: 24%
+  left: 50%
+  color: #fff
+  text-align: center
+  transform: translateX(-50%)
+  font-size: 0.18rem
+  font-weight: bold
+.game__count
+  position: absolute
+  width: 0.74rem
+  height: 0.74rem
+  display: flex
+  align-items: center
+  justify-content: center
+  left: 50%
+  top: 50%
+  transform: translateX(-110%) translateY(-50%)
+  span
+    font-size: 0.5rem
+    font-weight: 900
+    line-height: 0.1
+    color: #fff
+.game__control
+  position: absolute
+  width: 2rem
+  height: 0.74rem
+  display: flex
+  align-items: center
+  justify-content: space-around
+  top: 50%
+  left: 50%
+  transform: translateY(.5rem) translateX(-50%)
+.game__btn
+  width: 0.9rem
+  height: 0.32rem
+  border-radius: 10px
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)
+  border: none
+  color: #fff
+  font-size: 0.14rem
+  font-weight: bold
+  outline: none
+.game__btn--left
+  background: #DF2424
+.game__btn--right
+  background: #43B748
+
+.media-kiss
+  position: absolute
+  right: -0.15rem
+  top: 0.2rem
+  width: 0.64rem
+  animation: scale .5s ease
+
+
+
+.total__content
+  position: absolute
+  animation: show 1.6s ease
+  width: 2.8rem
+  height: 2.8rem
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  z-index: 12
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  display: none
+  &.active
+    display: flex
+.total__kiss
+  width: 100%
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: -1
+.total__heading
+  font-size: 0.2rem
+  font-weight: 500
+  color: #fff
+  line-height: 0.22rem
+  text-align: center
+.total__btn
+  display: inline-flex
+  height: 0.48rem
+  width: 1.7rem
+  border-radius: 10px
+  background: #43B748
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8)
+  color: #fff
+  font-weight: 500
+  text-decoration: none
+  justify-content: center
+  align-items: center
+  margin-top: 0.2rem
+  margin-bottom: 0.3rem
+  animation: pulse 4s ease infinite
+
+.accention
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: rgba(0,0,0,.8)
+  visibility: hidden
+  z-index: 10
+  &.active
+    visibility: visible
+  
+.no-spins
+  display: flex
+  position: absolute
+  top: 50%
+  height: 2rem
+  width: 100%
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  transform: translateY(-50%)
+  animation: show 1.6s ease
+  display: none
+  &.active
+    display: flex
+.no-spins__title
+  color: #fff
+  font-weight: 500
+  font-size: 0.28rem
+  text-align: center
+  line-height: 1.2
+.no-spins__btn
+  text-align: center
+  line-height: 1
+  font-size: 0.16rem
+  
+
+// ===================>
+// anims
+// <===================
+
+@keyframes scale
+  from
+    transform: scale(0)
+  to
+    transform: scale(1)
+@keyframes show
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes pulse
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.05)
+  100%
+    transform: scale(1.05)
+@keyframes rotate
+  0%
+    transform: rotate(0)
+  50%
+    transform: rotate(10deg)
+  100%
+    transform: rotate(0)

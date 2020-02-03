@@ -1,0 +1,38 @@
+@import "menu"
+  
+/////////////////////////////////////////////////
+// grid
+/////////////////////////////////////////////////
+.row
+  display: flex
+  flex-wrap: wrap
+.aic
+  align-items: center
+.jcc
+  justify-content: center
+.container
+  max-width: 1200px
+  padding: 0 15px
+  margin: auto
+  @media only screen and (max-width : 1200px)
+    max-width: 960px
+  @media only screen and (max-width : 992px)
+    max-width: 790px
+    padding: 0 10px
+/////////////////////////////////////////////////
+// typographic
+/////////////////////////////////////////////////
+
+.btn
+  background: $blue
+  color: #fff
+  text-transform: uppercase
+  padding: 15px 25px
+  text-decoration: none
+  font-size: 20px
+  width: auto
+  border-radius: 5px
+  &--dark 
+    background-color: $dark
+  &--orange
+    background-color: $orange

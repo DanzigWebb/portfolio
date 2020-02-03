@@ -1,0 +1,252 @@
+@import "vars"
+@import "most"
+@import "anim"
+
+.main
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100vh
+  width: 100%
+  min-height: 8.2rem
+  max-height: 8.5rem
+  box-sizing: border-box
+  margin: .1rem
+  @media (max-width: 481px)
+    height: calc(100vh - .3rem)
+    overflow: hidden
+.main__table
+  width: 100%
+  max-width: 7.2rem
+  height: 100%
+  margin: auto
+  background: linear-gradient(154.43deg, #EE4F1A 4.21%, #D74E2A 35.05%, #A8422C 75.98%, #E55224 106.28%)
+  box-shadow: 0px 15.8669px 15.8669px rgba(0, 0, 0, 0.25)
+  border-radius: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  box-sizing: border-box
+  @media (min-width: 768px)
+    min-height: 7.3rem
+  @media (max-width: 480px)
+    height: calc(100% - .4rem)
+
+.laps
+  position: absolute
+  display: flex
+  align-items: center
+  justify-content: space-around
+  .lamp
+    width: .15rem
+    animation: lamp_shine 1s ease
+    animation-delay: 0
+    animation-iteration-count: infinite
+    border-radius: 50%
+    overflow: hidden
+    &:nth-child(odd)
+      animation-delay: .8s
+    &:nth-child(3n + 3)
+      animation-delay: 1.6s
+  &.top
+    top: 0
+    height: .24rem
+    left: .3rem
+    width: calc(100% - .6rem)
+  &.bot
+    bottom: 0
+    height: .24rem
+    left: .3rem
+    width: calc(100% - .6rem)
+    flex-direction: row-reverse
+  &.left
+    left: 0
+    top: 0.3rem
+    height: 100%
+    width: .24rem
+    flex-direction: column-reverse
+    height: calc(100% - .6rem)
+  &.right
+    right: 0
+    top: 0.3rem
+    height: 100%
+    width: .24rem
+    flex-direction: column
+    height: calc(100% - .6rem)
+
+.main__table-inner
+  width: calc(100% - .5rem)
+  height: calc(100% - .5rem)
+  background-color: #fff
+  border-radius: 15px
+  background: linear-gradient(180deg, #95221D 0%, #95221D 100%)
+  box-shadow: inset 0px 3px 8px 5px rgba(0, 0, 0, 0.2)
+  display: flex
+  align-items: center
+  justify-content: center
+  @media ( max-width: 480px )
+    align-items: center
+h1
+  text-align: center
+  text-shadow: 0px 6.34676px 6.34676px rgba(0, 0, 0, 0.25)
+  font-size: 0.45rem
+  font-weight: bold
+  color: $accent
+  line-height: 1.2
+  margin-top: 0.1rem
+   
+.content
+  padding: .15rem
+  color: #fff
+  padding-bottom: 1.3rem
+  @media ( max-width: 480px )
+    padding: 0.1rem 0
+    padding-bottom: 1.3rem
+.list
+  margin: 0
+  padding: 0
+.list__item
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  &:first-child
+    p
+      font-weight: bold
+  p
+    margin: 0
+    text-align: center
+    font-weight: 500
+    padding-bottom: 0.1rem
+    border-right: 1.6px solid #6F0500
+    @media (max-width: 544px)
+      font-size: 0.16rem
+    &:last-child
+      color: $accent
+      border: none
+
+
+
+
+.money
+  position: absolute
+  z-index: 1
+  top: -1.2rem
+  bottom: -1.3rem
+  
+  img
+    height: 100%
+    transition: .7s ease-out
+    animation: moneble 26s linear .4s
+    animation-iteration-count: infinite
+.money__wrapper
+  transition: .7s ease-out
+.money--left
+  left: 0
+  transform: translateX(-90%)
+  @media (max-width: 481px)
+    transform: translateX(-110%)
+.money--right
+  right: 0
+  transform: translateX(90%)
+  @media (max-width: 481px)
+    transform: translateX(110%)
+  img
+    animation-direction: reverse
+    animation-duration: 32s
+
+.main-decor-mob-top
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
+  @media (min-width: 481px)
+    display: none
+  img
+    width: 100%
+    animation: mob 16s linear .4s
+    animation-iteration-count: infinite
+.main-decor-mob-bot
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 1
+  @media (min-width: 481px)
+    display: none
+  img
+    width: 110%
+    position: relative
+    bottom: -.35rem
+    animation: mob 16s linear .4s
+    animation-iteration-count: infinite
+    animation-direction: reverse
+    transform: translateY(10%)
+    z-index: -1
+.jackpot
+  height: 0.68rem
+  width: 3.6rem
+  margin: .15rem auto
+  display: flex
+  align-items: center
+  justify-content: center
+  background-image: url(../../img/jackpot.png)
+  background-size: cover
+  font-weight: bold
+  font-size: 0.24rem
+  border-radius: 8px
+  display: flex
+  .counter
+    width: 1.44rem
+    display: inline-block
+    text-align: right
+.bonus
+  height: 0.7rem
+  width: 3.6rem
+  background: #770F0A
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 10px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: .15rem auto
+  text-align: center
+  b
+    text-transform: uppercase
+    color: #FFD600
+
+@keyframes moneble
+  0%
+    transform: scale(.96)
+    transform: translateX(0)
+  50%
+    transform: scale(1.06)
+    transform: translateX(4%)
+  100%
+    transform: scale(.96)
+    transform: translateX(0)
+
+@keyframes lamp_shine
+  0%
+    filter: brightness(1.5)
+    transform: scale(1)
+    box-shadow: 0
+  50%
+    filter: brightness(2.5)
+    transform: scale(1.06)
+    box-shadow: 0px 0px 12px 0 #ffeb3b6b
+  100%
+    filter: brightness(1.5)
+    transform: scale(1)
+    box-shadow: 0
+
+@keyframes mob
+  0%
+    transform: scale(.96)
+    transform: translateY(0)
+  50%
+    transform: scale(1.06)
+    transform: translateY(-4%)
+  100%
+    transform: scale(.96)
+    transform: translateX(0)
