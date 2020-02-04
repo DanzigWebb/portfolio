@@ -32,14 +32,22 @@
     font-style: normal
     font-size: 45px
     line-height: 0.9
-  span
+  button
     padding-top: 10px
+    border: none
+    background-color: transparent
+    cursor: pointer
+    outline: none
+    transition: .6s ease all
+    color: #b9b9b9
   &:hover
     transform: translateY(-6px)
   &.active
     color: $accent
     background-color: #fff
-    // box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3)
     border: 1px solid rgba(0, 0, 0, 0.3)
     border-bottom: none
-    transform: scale(1.05)
+    height: calc(100% + 10px)
+    margin-bottom: 10px
+    button
+      color: $accent

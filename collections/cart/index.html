@@ -67,13 +67,14 @@
 
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item" data-target="resume"><i>:</i><span>Resume</span></li>
-        <li class="nav__item" data-target="portfolio"><i>8</i><span>Portfolio</span></li>
-        <li class="nav__item" data-target="contact"><i>!</i><span>Contact</span></li>
-        <li class="nav__item" data-target="profile"><i>C</i><span>Profile</span></li>
+
+        <li class="nav__item" data-target="profile"><i>C</i><button>Profile</button></li>
+        <li class="nav__item" data-target="resume"><i>:</i><button>Resume</button></li>
+        <li class="nav__item" data-target="portfolio"><i>8</i><button>Portfolio</button></li>
+        <li class="nav__item" data-target="contact"><i>!</i><button>Contact</button></li>
+
       </ul>
     </nav>
-
 
     <section class="section resume" id="resume">
       <div class="resume__main">
@@ -173,7 +174,7 @@
               <p class="skill-content__title">Solidworks</p>
               <div class="skill-content__item" data-value="4"></div>
             </div>
-            
+
           </article>
         </div>
 
@@ -206,7 +207,7 @@
               <p class="skill-content__title">PHP</p>
               <div class="skill-content__item" data-value="5"></div>
             </div>
-            
+
           </article>
         </div>
 
@@ -234,7 +235,7 @@
               <p class="skill-content__title">SqlLite</p>
               <div class="skill-content__item" data-value="7"></div>
             </div>
-            
+
           </article>
         </div>
 
@@ -252,21 +253,100 @@
               <p class="skill-content__title">Web Design</p>
               <div class="skill-content__item" data-value="5"></div>
             </div>
-            
+
           </article>
         </div>
       </div>
     </section>
-    <section class="section" id="portfolio">
-      <h1>Portfolio</h1>
+
+    <section class="section portfolio" id="portfolio">
+      <div class="filters">
+        <button class="filters__btn active" data-filter="">All</button>
+        <button class="filters__btn" data-filter="webdesign">WebDesign</button>
+        <button class="filters__btn" data-filter="photoghraphy">Photoghraphy</button>
+        <button class="filters__btn" data-filter="illustration">Illustration</button>
+        <button class="filters__btn" data-filter="print">Print</button>
+        <button class="filters__btn" data-filter="animation">Animation</button>
+      </div>
+      <div class="portfolio__title">
+        Some of the projects i'm proud with
+      </div>
+      <ul class="portfolio-items">
+        <li class="illustration print portfolio-item">
+          <img src="img/1.jpg" alt="">
+          <h5 class="portfolio-item__title">Hello Goodbye</h5>
+          <span class="portfolio-item__tag">Print / Illustration</span>
+        </li>
+        <li class="webdesign print animation portfolio-item">
+          <img src="img/2.jpg" alt="">
+          <h5 class="portfolio-item__title">Snow time</h5>
+          <span class="portfolio-item__tag">Webdesign / print / animation</span>
+        </li>
+        <li class="photoghraphy illustration print portfolio-item">
+          <img src="img/3.jpg" alt="">
+          <h5 class="portfolio-item__title">Help us</h5>
+          <span class="portfolio-item__tag">Photography / illustration</span>
+        </li>
+        <li class="animation portfolio-item">
+          <img src="img/4.jpg" alt="">
+          <h5 class="portfolio-item__title">Sunshine</h5>
+          <span class="portfolio-item__tag">Animation</span>
+        </li>
+        <li class="illustration animation portfolio-item">
+          <img src="img/5.jpg" alt="">
+          <h5 class="portfolio-item__title">Come together</h5>
+          <span class="portfolio-item__tag">illustration / animation</span>
+        </li>
+        <li class="webdesign print portfolio-item">
+          <img src="img/6.jpg" alt="">
+          <h5 class="portfolio-item__title">The yellow</h5>
+          <span class="portfolio-item__tag">Webdesign / Print</span>
+        </li>
+        <li class="photoghraphy illustration portfolio-item">
+          <img src="img/7.jpg" alt="">
+          <h5 class="portfolio-item__title">Black bird</h5>
+          <span class="portfolio-item__tag">photoghraphy / illustration</span>
+        </li>
+        <li class="illustration portfolio-item">
+          <img src="img/8.jpg" alt="">
+          <h5 class="portfolio-item__title">Revolution</h5>
+          <span class="portfolio-item__tag">illustration</span>
+        </li>
+      </ul>
     </section>
-    <section class="section" id="contact">
-      <h1>Contact</h1>
+    <section class="section contact" id="contact">
+      <div class="contact-info">
+        <h3>Contact info</h3>
+        <hr class="hr">
+        <div class="sect__item">
+          <article class="sect-content">
+            <span class="sect-content__txt">Melbourne Victoria 3000 Australia</span>
+            <br>
+            <span class="sect-content__txt">Email: John.smith@gmail.com</span>
+            <span class="sect-content__txt">Phone: +123 456 789 111</span>
+            <span class="sect-content__txt">Website: www.johnsmith.com</span>
+          </article>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Let's keep in touch</h3>
+        <hr class="hr">
+        <article class="sect-content sect-content--naked">
+          <form action="" method="POST" class="form">
+            <label for="name">Your Name</label>
+            <input type="text" name="name">
+            <label for="phone">Your Email</label>
+            <input type="text" name="phone">
+            <label for="message">Your Message</label>
+            <textarea name="message" cols="88" rows="6" class="textarea"></textarea>
+          </form>
+        </article>
+      </div>
     </section>
   </main>
 
-
-  <script src="js/items.js"></script>
+  <script src="libs/isotop.js"></script>
+  <script src="js/common.js"></script>
 </body>
 
 </html>
