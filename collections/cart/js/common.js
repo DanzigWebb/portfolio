@@ -8,26 +8,19 @@ $(document).ready(function () {
   // default position
   var activeItem = $('.nav__item[data-target="profile"]');
   showSect(activeItem)
-
   $navItems.on('click', function (e) {
     showSect($(this));
-
   });
-
   function showSect(item) {
-
     $navItems.not(item).removeClass('active');
     item.addClass('active');
-
     var $navTarget = item.attr('data-target');
     var $targetSection = $('#' + $navTarget);
-
     function slideDown(item) {
       setTimeout(() => {
         item.slideDown(animDuration)
       }, animDuration);
     }
-
     function slideUp(item) {
       item.slideUp(animDuration)
     }
@@ -65,7 +58,7 @@ $(document).ready(function () {
     itemSelector: '.portfolio-item',
     layoutMode: 'fitRows'
   });
-  filterPortfolio()
+  
   function filterPortfolio() {
     var $btns = $('.filters__btn');
     $btns.on('click', function () {
@@ -77,7 +70,10 @@ $(document).ready(function () {
       if (filter === '.') filter = '';
 
       $portfolioItems.isotope({ filter: filter })
-
     })
   }
+  filterPortfolio()
+  // fixed isotop
+
+  
 });
