@@ -6,14 +6,12 @@ $(document).ready(function () {
   var $sections = $('.section');
   var animDuration = 400
   // default position
-  var activeItem = $('.nav__item[data-target="contact"]');
+  var activeItem = $('.nav__item[data-target="profile"]');
   showSect(activeItem)
 
   $navItems.on('click', function (e) {
     showSect($(this));
-    $(this).attr('data-target') === 'profile'
-      ? $('.logo').addClass('show')
-      : $('.logo').removeClass('show')
+
   });
 
   function showSect(item) {
@@ -33,6 +31,9 @@ $(document).ready(function () {
     function slideUp(item) {
       item.slideUp(animDuration)
     }
+    item.attr('data-target') === 'profile'
+      ? $('.logo').addClass('show')
+      : $('.logo').removeClass('show')
 
     $sections.each(function () {
       $(this).is($targetSection)
